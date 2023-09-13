@@ -10,10 +10,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: Add origin
+        run: git remote add secondaryOrigin git@github.com:KarelPetruzela/test-dst.git;
 
       - name: deploy to other repo
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        run: |
-          git remote add secondaryOrigin git@github.com:KarelPetruzela/test-dst.git;
-          git push secondaryOrigin master -f
+        run: echo "${{ secrets.PK }}" > ~/.ssh/key; `GIT_SSH_COMMAND='ssh -i ~/.ssh/key -o IdentitiesOnly=yes' git push secondaryOrigin master -f
