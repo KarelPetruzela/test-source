@@ -12,6 +12,8 @@ jobs:
 
 
       - name: deploy to other repo
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
           git remote add secondaryOrigin git@github.com:KarelPetruzela/test-dst.git;
           git push secondaryOrigin master -f
