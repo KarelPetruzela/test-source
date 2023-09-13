@@ -1,0 +1,17 @@
+name: deploy-test
+on:
+  push:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+
+      - name: deploy to other repo
+        run: |
+          git remote add secondaryOrigin git@github.com:KarelPetruzela/test-dst.git;
+          git push secondaryOrigin master -f
