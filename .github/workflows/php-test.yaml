@@ -18,6 +18,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      php-versin: 8.2
     steps:
       - name: Install php
         run: |
