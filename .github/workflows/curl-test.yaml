@@ -6,41 +6,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
+        run: curl -A "Mozilla Chrome Safari" --retry 5 --retry-delay 0 --retry-max-time 400 --continue-at - https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
       - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
+        run: curl -A "Mozilla Chrome Safari" --retry 5 --retry-delay 0 --retry-max-time 400 --continue-at - https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
       - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/redirection.5.4.2.zip --output redirection.5.4.2.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/duplicate-post.4.5.zip --output duplicate-post.4.5.zip --verbose
-      - if: always()
-        run: curl -A "Mozilla Chrome Safari" https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
+        run: curl -A "Mozilla Chrome Safari" --retry 5 --retry-delay 0 --retry-max-time 400 --continue-at - https://downloads.wordpress.org/plugin/stream.3.10.0.zip --output stream.3.10.0.zip --verbose
       - if: always()
         run: ls -al
       - if: always()
